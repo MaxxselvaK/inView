@@ -2,6 +2,8 @@ package Greedy;
 
 import java.util.Arrays;
 //https://www.geeksforgeeks.org/assign-mice-holes/
+// easy problem
+//
 public class miceAndHole {
     public static void main(String[] args) {
         int[] mice = new int[]{-10, -79, -79, 67, 93, -85, -28, -94 };
