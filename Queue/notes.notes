@@ -1,0 +1,5 @@
+implementation can be done in array too.
+Pointers :
+Rear, Front 
+insert will happen at rear and remove happen at Front.
+Follows first in first out order.

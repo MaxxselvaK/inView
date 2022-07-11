@@ -1,0 +1,8 @@
+Follows Last in first order.
+We can use linkedlist to implement stack and queue very easily instead of arrays.
+keep one pointer as top and play with it :
+    Haha
+links :
+ https://www.geeksforgeeks.org/stack-data-structure/
+ https://www.cs.cmu.edu/~wlovas/15122-r11/lectures/10-stacks.pdf
+ https://www.cs.cmu.edu/~rjsimmon/15122-s13/09-queuestack.pdf

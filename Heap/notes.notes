@@ -1,0 +1,76 @@
+#Heaps uses complete binary tree to achieve the requirement
+
+# it can be implemented using array,
+
+formula to find the parent node and child node 
+
+parent node : Math.floor((idx-1)/2);
+left child node : 2*idx+1;
+right child node : 2*idx+2;
+Heap properties:
+parent node should be greater the the child 
+Two important functions :
+upHeapify (arrange the items by going towards up)
+downHeapify (arrange items by going towards down)
+time complexity :
+O(n logn) but we can solve it in O(n) time using some tricks Like GP and things.
+
+Coding: 
+    ```
+    function downheapify(heap, idx) {
+        var lc = 2*idx+1;
+        var rc = 2*idx+2;
+        if(lc >= heap.length && rc >= heap.length) return;
+        var largest = idx;
+        if(lc < heap.length && heap[lc].first > heap[largest].first) {
+            largest = lc;
+        }
+        if(rc < heap.length && heap[rc].first > heap[largest].first) {
+            largest = rc;
+        }
+        if(largest == idx) return;
+        var temp = heap[largest];
+        heap[largest] = heap[idx];
+        heap[idx] = temp;
+        downheapify(heap, largest);
+    }
+    ```
+    function upheapify(heap, idx) {
+	// heap = [{first: net_value, second: person}]
+	if(idx == 0) return;
+	var pi = Math.floor((idx-1)/2);
+	if(heap[pi].first < heap[idx].first) {
+		var temp = heap[pi];
+		heap[pi] = heap[idx];
+		heap[idx] = temp;
+		upheapify(heap, pi);
+	} else {
+		return;
+	}
+    }
+    ```
+function push_heap(heap, key, val) {
+	var ob = {"first": key, "second": val}
+	heap.push(ob);
+	upheapify(heap, heap.length-1);
+}
+ 
+function pop_heap(heap) {
+	if(heap.length == 0) return 0;
+	var i = heap.length - 1;
+	var temp = heap[0];
+	heap[0] = heap[i];
+	heap[i] = temp;
+	heap.pop();
+	downheapify(heap, 0);
+}
+ 
+function heap_top(heap) {
+	if(heap.length == 0) {
+		return;
+	}
+	return heap[0];
+}
+```
+Links:
+https://pastebin.com/gWdtRRVV (splitwise solution)

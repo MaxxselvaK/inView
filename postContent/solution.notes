@@ -1,0 +1,6 @@
+https://www.codechef.com/submit/CSUB
+
+no need to iterate, we can directly solve it by
+formula. found the total no of subarrays of all 1s. remove all 0s.
+total no of subarrays = n(n+1)/2
+
